@@ -11,5 +11,5 @@ import cucumber.api.CucumberOptions;
     },
     tags = {"~@ignored"}
 )
-public class RunWikipediaTest extends TestBase {
+public class RunTestsInChrome extends TestBase {
 }

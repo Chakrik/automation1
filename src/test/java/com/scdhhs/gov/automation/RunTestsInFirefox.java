@@ -14,5 +14,5 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
                 "json:target/cucumber-report/firefox/cucumber.json",
                 "junit:target/cucumber-report/firefox/cucumber.xml"},
         tags = {"~@ignored"})
-public class RunWikipediaTestInFirefox extends TestBaseWebClient {
+public class RunTestsInFirefox extends TestBaseWebClient {
 }

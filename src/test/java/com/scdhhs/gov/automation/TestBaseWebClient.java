@@ -22,11 +22,11 @@ public class TestBaseWebClient extends CustomAbstractTestNGCucumberTests {
 	protected static ThreadLocal<String> url = new ThreadLocal<>();
 	
 	@BeforeMethod
-	@Parameters(value = { "browser" })
-	public void setupTest(String browser) throws MalformedURLException {
+	@Parameters(value = { "browserUrl" })
+	public void setupTest(String browserUrl) throws MalformedURLException {
 		
 		// Set Browser to ThreadLocalMap
-		if (browser == null ||  "".equals(browser)) {
+		if (browserUrl == null ||  "".equals(browserUrl)) {
 			throw new RuntimeException("Invalid URL to start with.");
 			
 		} else {
@@ -41,7 +41,7 @@ public class TestBaseWebClient extends CustomAbstractTestNGCucumberTests {
 //	         webClient.getOptions().setUseInsecureSSL(true);
 		    
 			driver.set(webClient);
-			url.set(browser);
+			url.set(browserUrl);
 		}
 	}
 
