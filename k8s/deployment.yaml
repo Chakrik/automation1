@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: user-validation
+  labels:
+    app: user-validation
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 30005
+  selector:
+    app: user-validation
+    tier: user-validation
+  type: NodePort
+
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: user-validation
+  labels:
+    app: user-validation
+spec:
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: user-validation
+        tier: user-validation
+    spec:
+      containers:
+      - image: __IMAGE__
+        name: user-validation
+        ports:
+        - containerPort: 8080
+          name: user-validation

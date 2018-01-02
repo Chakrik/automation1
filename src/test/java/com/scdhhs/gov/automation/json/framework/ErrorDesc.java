@@ -1,7 +1,13 @@
-package com.scdhhs.gov.automation.framework;
+package com.scdhhs.gov.automation.json.framework;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * POJO representing the Error Description.
+ * 
+ * @author duser
+ *
+ */
 public class ErrorDesc {
 	
 	@JsonProperty("fieldName")

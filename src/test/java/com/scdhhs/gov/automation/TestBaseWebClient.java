@@ -1,18 +1,13 @@
 package com.scdhhs.gov.automation;
 
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import com.gargoylesoftware.htmlunit.WebClient;
-
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 public class TestBaseWebClient extends CustomAbstractTestNGCucumberTests {
 

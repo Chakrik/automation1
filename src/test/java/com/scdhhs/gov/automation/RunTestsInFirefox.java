@@ -1,9 +1,6 @@
 package com.scdhhs.gov.automation;
 
-import org.testng.annotations.Parameters;
-
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 
 @CucumberOptions(
